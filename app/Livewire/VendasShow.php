@@ -119,11 +119,7 @@ class VendasShow extends Component
                                AND (PCPEDC.DATA >= '$datai' AND PCPEDC.DATA <= '$dataf')
                                AND (PCPEDI.DATA >= '$datai' AND PCPEDI.DATA <= '$dataf')
                                AND PCPEDI.CODPROD = $codprod
-                               AND (    (PCPEDC.CODFILIAL <> '99')
-                                    AND PCPEDC.CODFILIAL IN
-                                            ( (SELECT CODIGOA
-                                                 FROM PCLIB
-                                                WHERE CODTABELA = 1 AND CODFUNC = 5601)))
+                               AND PCPEDC.CODFILIAL <> '99'
                                AND PCPEDC.CONDVENDA NOT IN (4,
                                                             5,
                                                             6,
@@ -238,12 +234,7 @@ class VendasShow extends Component
                                               AND (    PCPEDI.DATA >= '$datai'
                                                    AND PCPEDI.DATA <= '$dataf')
                                               AND PCPEDI.CODPROD = $codprod
-                                              AND (    (PCPEDC.CODFILIAL <> '99')
-                                                   AND PCPEDC.CODFILIAL IN
-                                                           ( (SELECT CODIGOA
-                                                                FROM PCLIB
-                                                               WHERE     CODTABELA = 1
-                                                                     AND CODFUNC = 5601)))
+                                              AND PCPEDC.CODFILIAL <> '99'                                                  
                                               AND PCPEDC.CONDVENDA NOT IN (4,
                                                                            5,
                                                                            6,
@@ -280,11 +271,7 @@ class VendasShow extends Component
                                AND (PCPEDC.DATA >= '$datai' AND PCPEDC.DATA <= '$dataf')
                                AND (PCPEDI.DATA >= '$datai' AND PCPEDI.DATA <= '$dataf')
                                AND PCPEDI.CODPROD = $codprod
-                               AND (    (PCPEDC.CODFILIAL <> '99')
-                                    AND PCPEDC.CODFILIAL IN
-                                            ( (SELECT CODIGOA
-                                                 FROM PCLIB
-                                                WHERE CODTABELA = 1 AND CODFUNC = 5601)))
+                               AND PCPEDC.CODFILIAL <> '99'
                                AND PCPEDC.CONDVENDA NOT IN (4,
                                                             5,
                                                             6,
